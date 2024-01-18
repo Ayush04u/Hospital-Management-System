@@ -248,15 +248,15 @@ class Hospital:
             try:
                 # Convert Issuedate, ExpDate, and DateofBirth to the correct format
                 issuedate_str = self.Issuedate.get()
-                issuedate_object = datetime.strptime(issuedate_str, '%m/%d/%Y')
+                issuedate_object = datetime.strptime(issuedate_str, '%d/%m/%Y')
                 formatted_issuedate = issuedate_object.strftime('%Y-%m-%d')
 
                 expdate_str = self.ExpDate.get()
-                expdate_object = datetime.strptime(expdate_str, '%m/%d/%Y')
+                expdate_object = datetime.strptime(expdate_str, '%d/%m/%Y')
                 formatted_expdate = expdate_object.strftime('%Y-%m-%d')
 
                 dob_str = self.DateofBirth.get()
-                dob_object = datetime.strptime(dob_str, '%m/%d/%Y')
+                dob_object = datetime.strptime(dob_str, '%d/%m/%Y')
                 formatted_dob = dob_object.strftime('%Y-%m-%d')
 
                 conn = mysql.connector.connect(host="localhost", user="root", password="Test@123#", database="mydata")
@@ -288,6 +288,7 @@ class Hospital:
             except Exception as e:
                 messagebox.showerror("Error", f"An error occurred: {str(e)}")
 
+
     def update(self):
         if self.Nameoftablets.get() == "" or self.ref.get() == "":
             messagebox.showerror("Error", "All fields are required")
@@ -295,15 +296,15 @@ class Hospital:
             try:
                 # Convert Issuedate, ExpDate, and DateofBirth to the correct format
                 issuedate_str = self.Issuedate.get()
-                issuedate_object = datetime.strptime(issuedate_str, '%m/%d/%Y')
+                issuedate_object = datetime.strptime(issuedate_str, '%d/%m/%Y')
                 formatted_issuedate = issuedate_object.strftime('%Y-%m-%d')
 
                 expdate_str = self.ExpDate.get()
-                expdate_object = datetime.strptime(expdate_str, '%m/%d/%Y')
+                expdate_object = datetime.strptime(expdate_str, '%d/%m/%Y')
                 formatted_expdate = expdate_object.strftime('%Y-%m-%d')
 
                 dob_str = self.DateofBirth.get()
-                dob_object = datetime.strptime(dob_str, '%m/%d/%Y')
+                dob_object = datetime.strptime(dob_str, '%d/%m/%Y')
                 formatted_dob = dob_object.strftime('%Y-%m-%d')
 
                 conn = mysql.connector.connect(host="localhost", user="root", password="Test@123#", database="mydata")
@@ -334,6 +335,8 @@ class Hospital:
 
             except Exception as e:
                 messagebox.showerror("Error", f"An error occurred: {str(e)}")
+
+
 
 
                         
