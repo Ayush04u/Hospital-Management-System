@@ -1,0 +1,13 @@
+ self.Nameoftablets.get(),
+                                                                                                        self.ref.get(),
+                                                                                                        self.Dose.get(),
+                                                                                                        self.NumberofTablets.get(),
+                                                                                                        self.Lot.get(),
+                                                                                                        self.Issuedate.get(),
+                                                                                                        self.ExpDate.get(),
+                                                                                                        self.DailyDose.get(),
+                                                                                                        self.StorageAdvice.get(),
+                                                                                                        self.nhsNumber.get(),
+                                                                                                        self.PatientName.get(),
+                                                                                                        self.DateofBirth.get(),
+                                                                                                        self.PatientAddress.get()
